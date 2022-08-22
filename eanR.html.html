@@ -1,0 +1,61 @@
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Prüfziffer berechnen</title>
+	
+<script> 
+         "use strict";
+	
+        function clicked() {
+			
+			let Z1 = parseFloatdocument.getElementById("idZ1").value;
+			let Z2 = parseFloatdocument.getElementById("idZ2").value;
+			let Z3 = parseFloatdocument.getElementById("idZ3").value;
+			let Z4 = parseFloatdocument.getElementById("idZ4").value;
+			let Z5 = parseFloatdocument.getElementById("idZ5").value;
+			let Z6 = document.getElementById("idZ6").value;
+			let Z7 = document.getElementById("idZ7").value;
+			let Z8 = document.getElementById("idZ8").value;
+			let Z9 = document.getElementById("idZ9").value;
+			let Z10 = document.getElementById("idZ10").value;
+			let Z11 = document.getElementById("idZ11").value;
+			let Z12= document.getElementById("idZ12").value;
+
+			let ZA = Z1 + Z2 + Z3 + Z4 + Z5 + Z6 + Z7 + Z8 + Z9 + Z10 + Z11 + Z12;
+			let ZE = Z1*1 + Z2*3 + Z3*1 + Z4*3 + Z5*1 + Z6*3 + Z7*1 + Z8*3 + Z9*1 + Z10*3 + Z11*1 + Z12*3;
+			let Pf ;
+
+			vPf=10-(vZE%10);
+				
+				if(vPf==10){
+				
+					vPf=0;
+				
+				}
+				
+		let Ausgabe = " Die Artikelnummer lautet "+ ZA +" Die Prüfsumme ist: "+ ZE +" Die Prüfziffer ist :"+ Pf;
+		document.getElementById("idAusgabe").innerHTML = Ausgabe;
+
+		}
+     
+				
+</script>
+		</head>
+	
+		<body>
+			<h1>Prüfziffer Berechnen</h1>
+			
+			EAN : <input id="idZ1" type="text" maxlength="1" size="1"> <input id="idZ2" type="text" maxlength="1" size="1"> <input id="idZ3" type="text" maxlength="1" size="1"> <input id="idZ4" type="text" maxlength="1" size="1"> <input id="idZ5" type="text" maxlength="1" size="1"> <input id="idZ6" type="text" maxlength="1" size="1"> <input id="idZ7" type="text" maxlength="1" size="1"> <input id="idZ8" type="text" maxlength="1" size="1"> <input id="idZ9" type="text" maxlength="1" size="1"> <input id="idZ10" type="text" maxlength="1" size="1"> <input id="idZ11" type="text" maxlength="1" size="1"> <input id="idZ12" type="text" maxlength="1" size="1">
+			      
+							
+			<button onClick="clicked();">Berechne die Prüfziffer</button><br /><br />
+	
+		    <div id="idAusgabe">Hier entsteht die Rechnung.</div>
+	
+		</body>
+</html> 
+               
+                    
